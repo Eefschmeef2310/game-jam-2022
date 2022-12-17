@@ -26,11 +26,10 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer <= 0f)
         {
             // Spawn an enemy
-            Instantiate(enemyList[0]);
-            Debug.Log("Spawn");
+            Instantiate(enemyList[Random.Range(0, enemyList.Count)]);
 
             // Reset the timer
-            currentInterval = Mathf.Max(currentInterval - enemySpawnIntervalModifier, enemySpawnIntervalMin);
+            currentInterval = Mathf.Max(currentInterval + enemySpawnIntervalModifier, enemySpawnIntervalMin);
             spawnTimer = currentInterval;
         }
     }
