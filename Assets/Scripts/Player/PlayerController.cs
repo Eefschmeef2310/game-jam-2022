@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 inputDirection;
 
+    public bool inAir = false;
+    private float airTimer = 0f;
+    private float airTimerMax = 1f;
+
     [SerializeField] private Animator jumpAnimator;
 
     void Update()
@@ -33,11 +37,26 @@ public class PlayerController : MonoBehaviour
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
         }
 
+        // Clamp position
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Camera.main.orthographicSize * Camera.main.aspect, Camera.main.orthographicSize * Camera.main.aspect),
+                                         Mathf.Clamp(transform.position.y, -Camera.main.orthographicSize, sea.transform.position.y + 2.2f));
+
         // Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Jump
             jumpAnimator.SetTrigger("Jump");
+            airTimer = airTimerMax;
+            inAir = true;
+        }
+
+        if (inAir)
+        {
+            airTimer -= Time.deltaTime;
+            if (airTimer <= 0f)
+            {
+                inAir = false;
+            }
         }
         
     }

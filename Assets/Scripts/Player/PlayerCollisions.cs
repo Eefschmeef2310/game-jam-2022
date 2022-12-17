@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
 {
+    public PlayerController controller;
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Trash")
+        if (controller.inAir)
         {
-            Debug.Log("Trash Touched");
+            if (col.tag == "EnemyAir")
+            {
+                Debug.Log("Enemy Touched");
+            }
         }
-        if(col.tag == "Enemy")
+        else
         {
-            Debug.Log("Enemy Touched");
+            if (col.tag == "Trash")
+            {
+                Debug.Log("Trash Touched");
+            }
+            if (col.tag == "Enemy" || col.tag == "EnemyAir")
+            {
+                Debug.Log("Enemy Touched");
+            }
         }
     }
 }
