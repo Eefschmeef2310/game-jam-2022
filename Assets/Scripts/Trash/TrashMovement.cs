@@ -6,11 +6,12 @@ public class TrashMovement : MonoBehaviour
 {
     public float speed = 3f;
     public List<Sprite> spriteList;
+    public SpriteRenderer spriteRenderer;
     Vector3 endPos;
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = spriteList[Random.Range(0, spriteList.Count)];
+        spriteRenderer.sprite = spriteList[Random.Range(0, spriteList.Count)];
         endPos = new Vector3(-transform.position.x - 2f, transform.position.y, transform.position.z);
     }
 

@@ -47,7 +47,7 @@ public class SeagullController : MonoBehaviour
                 isTriggered = true;
 
                 animator.SetTrigger("Dive");
-                Debug.Log("Trigger");
+                //Debug.Log("Trigger");
 
                 // Spawn warning
                 // warningObject = Instantiate(warningPrefab, new Vector3(transform.position.x, transform.position.y), Quaternion.identity, transform);

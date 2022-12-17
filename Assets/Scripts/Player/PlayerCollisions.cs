@@ -5,26 +5,20 @@ using UnityEngine;
 public class PlayerCollisions : MonoBehaviour
 {
     public PlayerController controller;
+    public ScoreManager scoreManager;
+    public LifeManager lifeManager;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (controller.inAir)
+        if (col.tag == "Trash")
         {
-            if (col.tag == "EnemyAir")
-            {
-                Debug.Log("Enemy Touched");
-            }
+            Destroy(col.gameObject);
+            scoreManager.addScore();
         }
-        else
+        if (col.tag == "Enemy" || col.tag == "EnemyAir")
         {
-            if (col.tag == "Trash")
-            {
-                Debug.Log("Trash Touched");
-            }
-            if (col.tag == "Enemy" || col.tag == "EnemyAir")
-            {
-                Debug.Log("Enemy Touched");
-            }
+            Destroy(col.gameObject);
+            lifeManager.minusLife();
         }
     }
 }
