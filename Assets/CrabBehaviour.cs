@@ -9,4 +9,11 @@ public class CrabBehaviour : MonoBehaviour
     {
         startPos = transform.position;
     }
+    void Update()
+    {
+        if(transform.position != startPos)
+        {
+            transform.position = Vector3.
+        }
+    }
 }

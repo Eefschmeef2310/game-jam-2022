@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8eaccb78b2085a4aba469eababc2d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crab: {fileID: 0}
+  crab: {fileID: 354785137361703107, guid: 696ab2ed5a5b8ed44b7f3067a877dc9f, type: 3}
 --- !u!1 &1960646260
 GameObject:
   m_ObjectHideFlags: 0

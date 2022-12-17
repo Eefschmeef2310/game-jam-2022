@@ -28,7 +28,7 @@ public class CreateCrab : MonoBehaviour
                 position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-(Camera.main.orthographicSize * Camera.main.aspect)/2, (Camera.main.orthographicSize * Camera.main.aspect)/2));
                 break;
         }
-        Instantiate(crab, position, Quaternion.identity);
+        Instantiate(crab, position, Quaternion.identity); 
 
    }
 }
