@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject sea;
+    public ParticleSystem particles;
     public float maxSpeed = 2f;
 
     public float acceleration = 50f;
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public bool inAir = false;
     private float airTimer = 0f;
-    private float airTimerMax = 1f;
+    private float airTimerMax = 1.5f;
 
     [SerializeField] private Animator animator;
 
@@ -40,12 +41,13 @@ public class PlayerController : MonoBehaviour
         // Rotations
         if (!inAir)
         {
+            particles.Play();
             Quaternion targetRotation = Quaternion.Euler(0f, 0f, 10f);
-            if (inputDirection.x > 0f)
+            if (inputDirection.x > 0f) //Right
             {
                 targetRotation = Quaternion.Euler(0f, 0f, 30f);
             }
-            else if (inputDirection.x < 0f)
+            else if (inputDirection.x < 0f) //Left
             {
                 targetRotation = Quaternion.Euler(0f, 0f, 5f);
 
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
             // Jump
             animator.SetTrigger("Jump");
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
 
         if (inAir)
         {
+            particles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             airTimer -= Time.deltaTime;
             if (airTimer <= 0f)
             {
