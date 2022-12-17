@@ -50,7 +50,7 @@ public class SeagullController : MonoBehaviour
                 Debug.Log("Trigger");
 
                 // Spawn warning
-                warningObject = Instantiate(warningPrefab, new Vector3(transform.position.x, transform.position.y), Quaternion.identity, transform);
+                // warningObject = Instantiate(warningPrefab, new Vector3(transform.position.x, transform.position.y), Quaternion.identity, transform);
             }
         }
         else
