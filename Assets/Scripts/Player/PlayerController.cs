@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject sea;
+    public GameObject particles;
     public float maxSpeed = 2f;
 
     public float acceleration = 50f;
@@ -76,6 +77,16 @@ public class PlayerController : MonoBehaviour
             {
                 inAir = false;
             }
+        }
+
+        if(Input.anyKeyDown)
+        {
+            Debug.Log("test");
+            particles.SetActive(true);
+        }
+        else
+        {
+            particles.SetActive(false);
         }
         
     }
