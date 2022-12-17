@@ -29,6 +29,5 @@ public class CreateCrab : MonoBehaviour
                 break;
         }
         Instantiate(crab, position, Quaternion.identity); 
-
    }
 }
