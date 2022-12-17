@@ -15,7 +15,7 @@ public class BuoyDepth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.y > transform.position.y)
+        if (playerTransform.position.y > transform.position.y + 1f)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, playerTransform.position.z - 0.4f);
         }

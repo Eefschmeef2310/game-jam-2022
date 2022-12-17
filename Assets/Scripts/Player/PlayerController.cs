@@ -38,18 +38,21 @@ public class PlayerController : MonoBehaviour
         }
 
         // Rotations
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, 10f);
-        if (inputDirection.x > 0f)
+        if (!inAir)
         {
-            targetRotation = Quaternion.Euler(0f, 0f, 30f);
-        }
-        else if (inputDirection.x < 0f)
-        {
-            targetRotation = Quaternion.Euler(0f, 0f, 5f);
-            
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, 10f);
+            if (inputDirection.x > 0f)
+            {
+                targetRotation = Quaternion.Euler(0f, 0f, 30f);
+            }
+            else if (inputDirection.x < 0f)
+            {
+                targetRotation = Quaternion.Euler(0f, 0f, 5f);
+
+            }
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, acceleration * 0.5f * Time.deltaTime);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, acceleration * 0.5f * Time.deltaTime);
 
 
         // Clamp position
