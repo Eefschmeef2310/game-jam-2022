@@ -6,7 +6,6 @@ public class CreateTrash : MonoBehaviour
 {
     public GameObject trash;
     public GameObject buoy;
-    public float borderWidth = 1;
     public GameObject sea;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +26,8 @@ public class CreateTrash : MonoBehaviour
         }
 
         Instantiate(prefab, new Vector3(
-            Camera.main.orthographicSize * Camera.main.aspect + borderWidth, 
-            Random.Range(-Camera.main.orthographicSize + borderWidth, sea.transform.position.y), 0), 
+            Camera.main.orthographicSize * Camera.main.aspect +10, 
+            Random.Range(-Camera.main.orthographicSize + 1, sea.transform.position.y), 0), 
             Quaternion.identity);
     }
 }
