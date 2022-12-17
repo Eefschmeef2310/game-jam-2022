@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private float airTimer = 0f;
     private float airTimerMax = 1f;
 
-    [SerializeField] private Animator jumpAnimator;
+    [SerializeField] private Animator animator;
 
     void Update()
     {
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Jump
-            jumpAnimator.SetTrigger("Jump");
+            animator.SetTrigger("Jump");
             airTimer = airTimerMax;
             inAir = true;
         }
@@ -77,6 +77,9 @@ public class PlayerController : MonoBehaviour
                 inAir = false;
             }
         }
+
+        // Tilting
+        animator.SetFloat("VelocityY", inputDirection.y);
         
     }
     void FixedUpdate()

@@ -220,7 +220,7 @@ MonoBehaviour:
   acceleration: 5
   friction: 1
   inAir: 0
-  jumpAnimator: {fileID: 2608686771942425541}
+  animator: {fileID: 2608686771942425541}
 --- !u!212 &7889405928127541073
 SpriteRenderer:
   m_ObjectHideFlags: 0
