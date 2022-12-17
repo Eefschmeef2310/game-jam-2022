@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 inputDirection;
 
+    [SerializeField] private Animator jumpAnimator;
+
     void Update()
     {
         // Input direction will always be a maximum value
@@ -29,6 +31,13 @@ public class PlayerController : MonoBehaviour
         {
             // Moving; speed up to input direction
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
+        }
+
+        // Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Jump
+            jumpAnimator.SetTrigger("Jump");
         }
         
     }
