@@ -11,7 +11,9 @@ public class SharkController : MonoBehaviour
     public GameObject hitboxPrefab;
     private GameObject hitboxObject;
 
-    private float lifetimer = 1f;
+    private float lifetimer = 0.8f;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +40,9 @@ public class SharkController : MonoBehaviour
                 // Attack
                 Destroy(warningObject);
                 hitboxObject = Instantiate(hitboxPrefab, transform.position, Quaternion.identity, transform);
+                animator.SetTrigger("Bite");
             }
-            else if (hitboxObject != null && lifetimer < 0.9f)
+            else if (hitboxObject != null && lifetimer < 0.7f)
             {
                 Destroy(hitboxObject);
             }
