@@ -120,8 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220597e4ec2524d4ba3aa8a7a1e59366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 9
   rb: {fileID: 8784484178264837162}
+  maxSpeed: 12
+  acceleration: 5
+  friction: 1
 --- !u!114 &8784484178264837163
 MonoBehaviour:
   m_ObjectHideFlags: 0
