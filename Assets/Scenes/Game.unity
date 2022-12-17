@@ -249,9 +249,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList:
   - {fileID: 354785137361703107, guid: 696ab2ed5a5b8ed44b7f3067a877dc9f, type: 3}
-  enemySpawnIntervalMax: 1
-  enemySpawnIntervalMin: 1
-  enemySpawnIntervalModifier: -0.1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 7
+      inSlope: -0.085952066
+      outSlope: -0.085952066
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.23616424
+    - serializedVersion: 3
+      time: 100
+      value: 0.5
+      inSlope: 0.0005469451
+      outSlope: 0.0005469451
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16176713
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1960646260
 GameObject:
   m_ObjectHideFlags: 0
