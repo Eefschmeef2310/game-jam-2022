@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6513944780210302814}
   - component: {fileID: 4712584818987709633}
   - component: {fileID: 8043101148938292015}
-  - component: {fileID: 7845504733311440440}
+  - component: {fileID: 8831293848170320252}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: efb08993e46994800a736d1f88e89019, type: 3}
+  m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1, y: 0.8828125}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7845504733311440440
+--- !u!114 &8831293848170320252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 354785137361703107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72706c6897da4d944b4610a2c4ba1b21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9056fab41dd2fcf42b3af42362df5a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windup: 0
+  speed: 30
