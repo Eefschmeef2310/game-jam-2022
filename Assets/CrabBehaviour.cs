@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrabBehaviour : MonoBehaviour
 {
-    Vector2 startPos;
+    Vector3 startPos;
     void Start()
     {
         startPos = transform.position;
@@ -13,7 +13,7 @@ public class CrabBehaviour : MonoBehaviour
     {
         if(transform.position != startPos)
         {
-            transform.position = Vector3.
+            transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, 3);
         }
     }
 }
