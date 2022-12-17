@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803783448}
   - component: {fileID: 1803783449}
+  - component: {fileID: 1803783450}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -169,6 +170,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trash: {fileID: 7289940353115748079, guid: a28fea5df81ccbd46af8f786467939c3, type: 3}
   borderWidth: 1
+--- !u!114 &1803783450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803783447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c7c47e3b1ec354aab43b7c29123ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 354785137361703107, guid: 696ab2ed5a5b8ed44b7f3067a877dc9f, type: 3}
+  enemySpawnIntervalMax: 1
+  enemySpawnIntervalMin: 1
+  enemySpawnIntervalModifier: -0.1
 --- !u!1 &1960646260
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784484178264837160, guid: a461aa35058eede4fab0ffb05229a4e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 8784484178264837160, guid: a461aa35058eede4fab0ffb05229a4e1, type: 3}
       propertyPath: m_LocalPosition.z
