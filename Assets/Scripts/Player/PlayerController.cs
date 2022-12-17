@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject sea;
     public float maxSpeed = 2f;
 
     public float acceleration = 50f;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
             // Moving; speed up to input direction
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
         }
+        
     }
     void FixedUpdate()
     {

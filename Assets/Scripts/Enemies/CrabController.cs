@@ -7,17 +7,20 @@ public class CrabController : MonoBehaviour
     public float windup = 0.7f;
     public float speed = 20f;
     Vector3 endPos;
+    GameObject sea;
 
     void Start()
     {
+        sea = GameObject.FindGameObjectWithTag("Sea");
+
         Vector3 position = Vector3.zero;
-        switch (Random.Range(0, 2)) //randomly pick a side, then spawn a cherry at a random spot along that axis
+        switch (Random.Range(0, 2)) //randomly pick a side, then spawn a crab at a random spot along that axis
         {
             case 0: //left
-                position = new Vector3(-Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-(Camera.main.orthographicSize * Camera.main.aspect) / 2, (Camera.main.orthographicSize * Camera.main.aspect) / 2));
+                position = new Vector3(-Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-Camera.main.orthographicSize, sea.transform.position.y));
                 break;
             case 1: //right
-                position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-(Camera.main.orthographicSize * Camera.main.aspect) / 2, (Camera.main.orthographicSize * Camera.main.aspect) / 2));
+                position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-Camera.main.orthographicSize, sea.transform.position.y));
                 break;
         }
         transform.position = position;
