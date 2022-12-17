@@ -20,7 +20,7 @@ public class SeagullController : MonoBehaviour
     void Start()
     {
         sea = GameObject.FindGameObjectWithTag("Sea");
-        transform.position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect + 1, sea.transform.position.y + 1f);
+        transform.position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect + 1, sea.transform.position.y + 2.5f);
         endPos = new Vector3(-transform.position.x, transform.position.y);
 
         playerTransform = FindObjectOfType<PlayerController>().gameObject.transform;

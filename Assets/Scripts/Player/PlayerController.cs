@@ -37,9 +37,25 @@ public class PlayerController : MonoBehaviour
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
         }
 
+        // Rotations
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, 10f);
+        if (inputDirection.x > 0f)
+        {
+            targetRotation = Quaternion.Euler(0f, 0f, 30f);
+        }
+        else if (inputDirection.x < 0f)
+        {
+            targetRotation = Quaternion.Euler(0f, 0f, 5f);
+            
+        }
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, acceleration * 0.5f * Time.deltaTime);
+
+
         // Clamp position
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Camera.main.orthographicSize * Camera.main.aspect, Camera.main.orthographicSize * Camera.main.aspect),
                                          Mathf.Clamp(transform.position.y, -Camera.main.orthographicSize, sea.transform.position.y + 2.2f));
+
 
         // Jumping
         if (Input.GetKeyDown(KeyCode.Space))
