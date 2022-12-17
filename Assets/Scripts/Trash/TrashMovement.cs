@@ -11,13 +11,13 @@ public class TrashMovement : MonoBehaviour
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = spriteList[Random.Range(0, spriteList.Count)];
-        endPos = new Vector3(-transform.position.x - 1f, transform.position.y, transform.position.z);
+        endPos = new Vector3(-transform.position.x - 2f, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position != endPos)
+        if(transform.position.x != endPos.x)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPos, speed * Time.deltaTime);
         }
