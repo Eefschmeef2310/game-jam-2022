@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator introAnimator;
     public Animator shadow;
+    public AudioSource source;
+    public List<AudioClip> clips;
     public GameObject sea;
     public ParticleSystem particles;
     public float maxSpeed = 2f;
@@ -40,11 +42,19 @@ public class PlayerController : MonoBehaviour
         {
             // Not moving; slow down to 0
             movementDirection = Vector2.Lerp(movementDirection, Vector2.zero, friction * Time.deltaTime);
+            source.Stop();
         }
         else
         {
             // Moving; speed up to input direction
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
+            if(!source.isPlaying && !inAir)
+            {
+                source.loop = true;
+                source.clip = clips[0];
+                source.Play();
+            }   
+            
         }
 
         if(inputDirection.y >= 0) //going up
@@ -89,6 +99,10 @@ public class PlayerController : MonoBehaviour
             shadow.Play("Shadow");
             airTimer = airTimerMax;
             inAir = true;
+
+            source.clip = clips[1];
+            source.loop = false;
+            source.Play();
         }
 
         if (inAir)

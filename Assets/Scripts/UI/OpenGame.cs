@@ -9,7 +9,6 @@ public class OpenGame : MonoBehaviour
     public Camera menuCamera;
     public void openGame()
     {
-        menu.SetActive(false);
         Destroy(GameObject.Find("EventSystem"));
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
     }

@@ -8,6 +8,8 @@ public class LifeManager : MonoBehaviour
     public int lives = 3;
     public List<Image> lifeImages;
     public GameObject GameOver;
+    public AudioSource background;
+    public AudioClip clip;
     void Start()
     {
         foreach(Image life in lifeImages)
@@ -50,6 +52,8 @@ public class LifeManager : MonoBehaviour
     }
     public void gameOver()
     {
+        background.Stop();
+        AudioSource.PlayClipAtPoint(clip, Vector3.zero);
         Time.timeScale = 0f;
         GameOver.SetActive(true);
     }
