@@ -1358,6 +1358,7 @@ GameObject:
   - component: {fileID: 1803783450}
   - component: {fileID: 1803783451}
   - component: {fileID: 1803783452}
+  - component: {fileID: 1803783454}
   - component: {fileID: 1803783453}
   m_Layer: 0
   m_Name: Game Manager
@@ -1484,6 +1485,21 @@ MonoBehaviour:
   spawner: {fileID: 1803783450}
   scoreManager: {fileID: 1803783451}
   life: {fileID: 1803783452}
+  spawnWave: {fileID: 1803783454}
+--- !u!114 &1803783454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803783447}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76029af05fed47f42bb9188746be5602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 3875068350052427356, guid: bc39e98ffa0ff7841aec34487d067adb, type: 3}
+  sea: {fileID: 1573101106}
 --- !u!1 &1960646260
 GameObject:
   m_ObjectHideFlags: 0

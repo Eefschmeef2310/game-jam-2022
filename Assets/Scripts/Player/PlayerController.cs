@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool inAir = false;
     private float airTimer = 0f;
     private float airTimerMax = 1.5f;
+    
+    GameObject wave;
 
     [SerializeField] private Animator animator;
 
@@ -69,9 +71,10 @@ public class PlayerController : MonoBehaviour
 
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space) && !inAir)
+        if (Input.GetKeyDown(KeyCode.Space) && !inAir && wave != null)
         {
             // Jump
+            Destroy(wave);
             animator.SetTrigger("Jump");
             airTimer = airTimerMax;
             inAir = true;
@@ -94,6 +97,22 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = movementDirection * maxSpeed;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Wave")
+        {
+            wave = col.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.tag == "Wave")
+        {
+            wave = null;
+        }
     }
 
 }

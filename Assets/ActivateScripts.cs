@@ -8,11 +8,13 @@ public class ActivateScripts : MonoBehaviour
     public EnemySpawner spawner;
     public ScoreManager scoreManager;
     public LifeManager life;
+    public spawnWave spawnWave;
     void Start()
     {
         trash.enabled = true;
         spawner.enabled = true;
         scoreManager.enabled = true;
         life.enabled = true;
+        spawnWave.enabled = true;
     }
 }
