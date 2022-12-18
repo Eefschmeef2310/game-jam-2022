@@ -8,6 +8,13 @@ public class LifeManager : MonoBehaviour
     public int lives = 3;
     public List<Image> lifeImages;
     public GameObject GameOver;
+    void Start()
+    {
+        foreach(Image life in lifeImages)
+        {
+            life.enabled = true;
+        }
+    }
     public void minusLife()
     {
         lives--;

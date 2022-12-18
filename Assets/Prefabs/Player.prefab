@@ -6153,7 +6153,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0.43137255, g: 0.58431375, b: 0.7176471, a: 1}
+        key1: {r: 0.24705882, g: 0.28235295, b: 0.8, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -9728,6 +9728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8784484178264837161}
+  scoreManager: {fileID: 0}
+  lifeManager: {fileID: 0}
 --- !u!61 &6247586084277385118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9818,6 +9820,7 @@ GameObject:
   - component: {fileID: 8784484178264837162}
   - component: {fileID: 8784484178264837161}
   - component: {fileID: 7889405928127541073}
+  - component: {fileID: 6608190431113941774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9877,6 +9880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8784484178264837162}
+  introAnimator: {fileID: 6608190431113941774}
   sea: {fileID: 0}
   particles: {fileID: 6114326872829317896}
   maxSpeed: 12
@@ -9936,3 +9940,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6608190431113941774
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784484178264837166}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f5ed199ebd2e2b4aa239deb8f72dda9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Animator introAnimator;
     public GameObject sea;
     public ParticleSystem particles;
     public float maxSpeed = 2f;
@@ -20,6 +21,11 @@ public class PlayerController : MonoBehaviour
     private float airTimerMax = 1.5f;
 
     [SerializeField] private Animator animator;
+
+    void Start()
+    {
+        introAnimator.enabled = false;
+    }
 
     void Update()
     {

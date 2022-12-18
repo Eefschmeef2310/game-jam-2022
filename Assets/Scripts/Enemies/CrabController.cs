@@ -24,6 +24,7 @@ public class CrabController : MonoBehaviour
                 break;
             case 1: //right
                 position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect + 2f, Random.Range(-Camera.main.orthographicSize, sea.transform.position.y));
+                transform.rotation = new Quaternion(0,180,0,0);
                 break;
         }
         transform.position = position;
