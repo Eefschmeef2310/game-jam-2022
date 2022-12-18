@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 4132565968544801629}
   - component: {fileID: 3022663602940855325}
   - component: {fileID: 43286454917354673}
+  - component: {fileID: 3276245402141429880}
+  - component: {fileID: -2646677929835103782}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Trash
@@ -167,6 +169,32 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fea779ebeee567948ab679f8de0201e6, type: 3}
   - {fileID: 21300000, guid: c98064c9aca9042438a5cf7749eb0e3a, type: 3}
   spriteRenderer: {fileID: 634675426016415906}
+--- !u!114 &3276245402141429880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289940353115748079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c5b931653d034c95e22de780be6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: face1965a7a6c6841899f22fdf3d1747, type: 3}
+--- !u!114 &-2646677929835103782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289940353115748079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb4c18bba3abfe448332da4ec50ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountBeforeSwitch: -0.5
 --- !u!1 &7540799181563630173
 GameObject:
   m_ObjectHideFlags: 0

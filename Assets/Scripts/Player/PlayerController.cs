@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator introAnimator;
+    public Animator shadow;
     public GameObject sea;
     public ParticleSystem particles;
     public float maxSpeed = 2f;
@@ -46,6 +47,15 @@ public class PlayerController : MonoBehaviour
             movementDirection = Vector2.Lerp(movementDirection, inputDirection, acceleration * Time.deltaTime);
         }
 
+        if(inputDirection.y >= 0) //going up
+        {
+            particles.transform.position = new Vector3(particles.transform.position.x, particles.transform.position.y, -0.65f);
+        }
+        else //going down
+        {
+            particles.transform.position = new Vector3(particles.transform.position.x, particles.transform.position.y, 0.65f);
+        }
+
         // Rotations
         if (!inAir)
         {
@@ -76,6 +86,7 @@ public class PlayerController : MonoBehaviour
             // Jump
             Destroy(wave);
             animator.SetTrigger("Jump");
+            shadow.Play("Shadow");
             airTimer = airTimerMax;
             inAir = true;
         }

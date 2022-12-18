@@ -15,7 +15,7 @@ public class waveBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x != endPos.x)
+        if(Vector3.Distance(transform.position, endPos) >= 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPos, speed * Time.deltaTime);
         }

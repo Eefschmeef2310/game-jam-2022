@@ -18,5 +18,6 @@ public class spawnWave : MonoBehaviour
             Camera.main.orthographicSize * Camera.main.aspect +10, 
             Random.Range(-Camera.main.orthographicSize + 1, sea.transform.position.y), 0), 
             new Quaternion(0,180,0,0));
+        Invoke("create", Random.Range(1, 4));
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuoyDepth : MonoBehaviour
 {
     Transform playerTransform;
+    public float amountBeforeSwitch;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class BuoyDepth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.y > transform.position.y + 1f)
+        if (playerTransform.position.y > transform.position.y + amountBeforeSwitch)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, playerTransform.position.z - 0.4f);
         }

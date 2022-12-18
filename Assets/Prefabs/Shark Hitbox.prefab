@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 133232026319407442}
   - component: {fileID: 5608961559997379059}
   - component: {fileID: 8451642601362333704}
+  - component: {fileID: -4194766687953021112}
   m_Layer: 0
   m_Name: Shark Hitbox
   m_TagString: Enemy
@@ -101,3 +102,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &-4194766687953021112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944133526432774697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c5b931653d034c95e22de780be6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 78a69b48108095b4b9a76c0b7888eaf0, type: 3}

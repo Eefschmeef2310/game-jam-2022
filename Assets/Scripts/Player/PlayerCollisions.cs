@@ -12,11 +12,13 @@ public class PlayerCollisions : MonoBehaviour
     {
         if (col.tag == "Trash")
         {
+            col.GetComponent<PlaySound>().playSound();
             Destroy(col.gameObject);
             scoreManager.addScore();
         }
         if (col.tag == "Enemy" || col.tag == "EnemyAir")
         {
+            col.GetComponent<PlaySound>().playSound();
             Destroy(col.gameObject);
             lifeManager.minusLife();
         }

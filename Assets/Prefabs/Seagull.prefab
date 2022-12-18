@@ -61,6 +61,8 @@ GameObject:
   - component: {fileID: 2054358806707429005}
   - component: {fileID: 147493805382768056}
   - component: {fileID: 3851536467582532737}
+  - component: {fileID: 1503788942649143336}
+  - component: {fileID: 2443938315582822777}
   m_Layer: 0
   m_Name: Animation
   m_TagString: EnemyAir
@@ -181,3 +183,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.1205602, y: 0.8070183}
   m_EdgeRadius: 0
+--- !u!114 &1503788942649143336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475191972064497806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5f143769793274fb8d2d49b852250b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2443938315582822777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475191972064497806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c5b931653d034c95e22de780be6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 78a69b48108095b4b9a76c0b7888eaf0, type: 3}

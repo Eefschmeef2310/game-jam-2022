@@ -4827,6 +4827,7 @@ GameObject:
   - component: {fileID: -1196828142426857970}
   - component: {fileID: 3883914895585894148}
   - component: {fileID: 43286454917354673}
+  - component: {fileID: 858550605042166694}
   m_Layer: 0
   m_Name: Buoy
   m_TagString: Enemy
@@ -4888,6 +4889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb4c18bba3abfe448332da4ec50ea0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountBeforeSwitch: 1
 --- !u!212 &3883914895585894148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4960,3 +4962,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 56ba68daa9eeecf41bdf0a5af2d32cdf, type: 3}
   - {fileID: 21300000, guid: 5a2a9d87b2ad346498ca938c4d97bbde, type: 3}
   spriteRenderer: {fileID: 3883914895585894148}
+--- !u!114 &858550605042166694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289940353115748079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c5b931653d034c95e22de780be6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 78a69b48108095b4b9a76c0b7888eaf0, type: 3}
